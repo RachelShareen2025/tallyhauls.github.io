@@ -3,151 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TallyHauls | Freight Broker Reconciliation Made Easy</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>TallyHauls | Freight Broker Reconciliation</title>
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    * {
       margin: 0;
-      background: #f8f9fa;
-      color: #212529;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #111;
+      line-height: 1.6;
     }
     header {
-      padding: 60px 20px;
-      text-align: center;
-      background-color: #ffffff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     header img {
-      height: 50px;
-      margin-bottom: 20px;
+      height: 40px;
     }
-    h1 {
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-image: url('2.png');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      inset: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
     }
-    .subheading {
-      font-size: 1.25rem;
-      color: #6c757d;
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
     }
-    .cta-button {
-      margin-top: 30px;
-      background: #0d6efd;
+    .hero a {
+      background-color: #007bff;
       color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .hero a:hover {
+      background-color: #0056b3;
     }
     .section {
-      padding: 60px 20px;
-      max-width: 960px;
-      margin: auto;
-    }
-    .features {
       display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-    .feature {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    h2 {
-      margin-bottom: 1rem;
-      font-size: 2rem;
-    }
-    .faq {
-      margin-top: 40px;
-    }
-    .faq h3 {
-      margin-bottom: 10px;
-      color: #0d6efd;
-    }
-
-    /* File stack section with dark overlay */
-    .file-stack {
+      align-items: center;
+      justify-content: center;
+      text-align: left;
       position: relative;
-      background: url('wesley-tingey-snNHKZ-mGfE-unsplash.jpg') no-repeat center center;
-      background-size: cover;
-      color: white;
-      padding: 100px 20px;
-      border-radius: 10px;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-      overflow: hidden;
+      margin-top: 2rem;
     }
-    .file-stack::before {
-      content: "";
+    .dashboard-image {
+      width: 100%;
+      height: 400px;
+      background-image: url('wesley-tingey-snNHKZ-mGfE-unsplash.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .dashboard-overlay {
       position: absolute;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
       background: rgba(0, 0, 0, 0.55);
-      z-index: 0;
-      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white;
+      padding-left: 2rem;
     }
-    .file-stack > * {
-      position: relative;
-      z-index: 1;
+    .dashboard-overlay h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .dashboard-overlay p {
+      font-size: 1.1rem;
+      max-width: 700px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <img src="2.png" alt="TallyHauls Logo" />
-  <h1>Reconcile Freight Invoices 10x Faster</h1>
-  <p class="subheading">TallyHauls automates financial reconciliation for U.S. freight brokers</p>
- <a href="https://your-wise-payment-link.com" class="cta-button">View Pricing Plans</a>
-</header>
+  <!-- Sticky Navbar -->
+  <header>
+    <img src="2.png" alt="TallyHauls Logo">
+  </header>
 
-<section class="section file-stack">
-  <h2>One Simple Dashboard</h2>
-  <p>All your PDF invoices and files organized, auto-matched, and reconciled. No more chaos.</p>
-</section>
-
-<section class="section">
-  <h2>Why Freight Brokers Love TallyHauls</h2>
-  <div class="features">
-    <div class="feature">
-      <h3>🔄 Match Carrier Invoices to Load Data Instantly</h3>
-      <p>Upload PDFs and let our AI auto-reconcile invoice charges to dispatch records.</p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Reconcile Freight Invoices 10x Faster</h1>
+      <p>TallyHauls automates financial reconciliation for U.S. freight brokers</p>
+      <a href="https://wise.com/your-free-trial-link" target="_blank">Start Free Trial</a>
     </div>
-    <div class="feature">
-      <h3>📊 Weekly Financial Summaries</h3>
-      <p>Know what’s paid, unpaid, and disputed. Delivered every Monday morning.</p>
-    </div>
-    <div class="feature">
-      <h3>🧾 Paperless Audit Trail</h3>
-      <p>Keep your books clean. Every file is searchable, shareable, and archived forever.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <h2>How It Works</h2>
-  <ol>
-    <li>Upload your invoices & load sheets (PDF, CSV)</li>
-    <li>TallyHauls auto-matches and flags issues</li>
-    <li>Get your weekly summary, export to accounting</li>
-  </ol>
-</section>
-
-<section class="section">
-  <h2>FAQs</h2>
-  <div class="faq">
-    <h3>Is this secure?</h3>
-    <p>100%. Files are encrypted and stored securely. You're always in control.</p>
-    <h3>How does billing work?</h3>
-    <p>Start with a 10-day free trial. After that, it's a flat monthly rate—no per-invoice BS.</p>
-    <h3>Do I need to install anything?</h3>
-    <p>Nope. Everything works in your browser. Zero IT headaches.</p>
-  </div>
-</section>
+  <!-- Dashboard Section -->
+  <section class="section">
+    <div class="dashboard-image">
+      <div class="dashboard-overlay">
+        <h2>One Simple Dashboard</h2>
+        <p>All your PDF invoices and files organized, auto-matched, and reconciled. No more chaos.</p>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
